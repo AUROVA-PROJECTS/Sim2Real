@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Sim-to-Real Transfer by Hybrid 3D Gaussian Splatting and LiDAR Reconstruction for Autonomous Driving">
-  <meta property="og:title" content="Sim-to-Real Transfer by Hybrid 3D Gaussian Splatting and LiDAR Reconstruction for Autonomous Driving"/>
-  <meta property="og:description" content="Sim-to-Real Transfer by Hybrid 3D Gaussian Splatting and LiDAR Reconstruction for Autonomous Driving"/>
+  <meta name="description" content="Sim-to-Real Transfer by Hybrid Gaussian Splatting and Geometric Reconstruction for Autonomous Driving">
+  <meta property="og:title" content="Sim-to-Real Transfer by Hybrid Gaussian Splatting and Geometric Reconstruction for Autonomous Driving/>
+  <meta property="og:description" content="Sim-to-Real Transfer by Hybrid Gaussian Splatting and Geometric Reconstruction for Autonomous Driving"/>
   <meta property="og:url" content="https://aurova-projects.github.io/Sim2Real/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/Graphic_abstract.png" />
@@ -18,11 +18,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Sim-to-Real Transfer by Hybrid 3D Gaussian Splatting and LiDAR Reconstruction for Autonomous Driving</title>
+  <title>Sim-to-Real Transfer by Hybrid Gaussian Splatting and Geometric Reconstruction for Autonomous Driving</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -44,12 +44,12 @@
   <header class="hero is-small">
     <div class="hero-body">
       <div class="header_menu">
-        <a href="https://aurova-projects.github.io/" style="width: 20%;"><img src="static/images/logoAUROVA.png" alt="Logo AUROVA" class="header_image"/></a>
+        <a href="index.html" style="width: 20%;"><img src="static/images/logoAUROVA.png" alt="Logo AUROVA" class="header_image"/></a>
         <div class="header_index">
-          <a href="https://aurova-projects.github.io/" target="_self" class="home"><i class="fas fa-home" style="transform: scale(0.75) translateY(10px);"></i><strong>AUROVA</strong>&emsp;</a>&emsp;
-          <a href="https://aurova-projects.github.io/team/index.html" target="_self">Team</a>&emsp;
-          <a href="https://aurova-projects.github.io/research/index.html" target="_self">Research</a>&emsp;
-          <a href="https://aurova-projects.github.io/projects/index.html" target="_self">Projects</a>
+          <a href="index.html" target="_self" class="home"><i class="fas fa-home" style="transform: scale(0.75) translateY(10px);"></i><strong>AUROVA</strong>&emsp;</a>&emsp;
+          <a href="team/index.html" target="_self">Team</a>&emsp;
+          <a href="research/index.html" target="_self">Research</a>&emsp;
+          <a href="projects/index.html" target="_self">Projects</a>
         </div>
         <a href="https://www.ua.es/" target="_blank"  style="width: 22%;"><img src="static/images/logo-ua.png" alt="Logo UA" class="header_image"/></a>
       </div>
@@ -62,7 +62,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Sim-to-Real Transfer by Hybrid 3D Gaussian Splatting and LiDAR Reconstruction for Autonomous Driving</h1>
+            <h1 class="title is-1 publication-title">Sim-to-Real Transfer by Hybrid Gaussian Splatting and Geometric Reconstruction for Autonomous Driving</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -161,13 +161,12 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/QmRLwfY-0To?si=J6UgT5NGmGmXUAz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -176,16 +175,6 @@
 </section>
 <!-- End youtube video -->
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-        <img src="static/images/Graphic_abstract.png" alt="Pipeline of the paper" class="center" width="50%"/>
-        <h2 class="subtitle has-text-centered">
-          Pipeline to generate highly-realistic simulations and used them to transfer learned policies to the real world.
-        </h2>
-</div>
-</div>
-</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -194,9 +183,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Learning complex navigation behaviors in simulation and successfully transferring them to the real world remains a significant challenge due to the sim-to-real gap. To address this issue, we propose a hybrid reconstruction approach that combines LiDAR data and monocular images to create visually and structurally realistic simulated environments. Specifically, we extract an accurate mesh from LiDAR measurements and integrate it with geometry-consistent 3D Gaussian Splatting to render photorealistic images. Additionally, we proposed an end-to-end neural network designed to generate control commands for a mobile robot, and it is used to assess the effectiveness of the hybrid reconstructions in narrowing the sim-to-real gap. In the proposed model, we introduce a novel auxiliary branch and define loss functions to improve the network’s ability to learn safe and robust actions. The method is evaluated by deploying it on a real robot to navigate over a total distance of 3.5 km, and experimental results show that models trained purely in simulation achieve performance comparable to those trained on real-world data.
-          </p>
+          <p>Learning complex navigation behaviors in simulation and successfully transferring them to the real world remains a significant challenge due to the sim-to-real gap. To address this issue, we propose a hybrid reconstruction approach that combines Light Detection and Ranging (LiDAR) data and monocular images to create visually and structurally realistic simulated environments. Specifically, we extract an accurate mesh from LiDAR measurements and integrate it with geometry-consistent Three-Dimensional Gaussian Splatting (3DGS) to render photorealistic images. Additionally, we present an end-to-end neural network designed to generate control commands for a mobile robot, and it is used to assess the effectiveness of the hybrid reconstructions in narrowing the sim-to-real gap. In the proposed model, we introduce a novel auxiliary branch and define loss functions to improve the network’s ability to learn safe and robust actions. The method, which is based on imitation learning, is evaluated by deploying it on a real robot to navigate over a total distance of 3.5 kilometers, and experimental results show that models trained purely in simulation achieve performance comparable to those trained on real-world data.</p>
         </div>
       </div>
     </div>
